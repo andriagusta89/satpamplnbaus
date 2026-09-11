@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SatpamPiket</string>
+    <string name="face_login">Absen dengan Wajah</string>
+    <string name="face_not_recognized">Wajah tidak dikenal</string>
+    <string name="check_in_success">Berhasil Absen!</string>
+    <string name="history">Riwayat Absensi</string>
+    <string name="settings">Pengaturan</string>
+    <string name="shift_pagi">Shift Pagi (07:00 - 15:00)</string>
+    <string name="shift_siang">Shift Siang (15:00 - 23:00)</string>
+    <string name="shift_malam">Shift Malam (23:00 - 07:00)</string>
+    <string name="status_tepat">TEPAT WAKTU</string>
+    <string name="status_terlambat">TERLAMBAT</string>
+    <string name="sync_pending">Menunggu sinkronisasi…</string>
+    <string name="sync_success">Data berhasil disinkronkan</string>
+    <string name="camera_permission_required">Izin kamera diperlukan untuk absensi wajah</string>
+    <string name="scan_face_instruction">Arahkan wajah ke kamera</string>
+    <string name="dashboard_title">Dashboard Piket</string>
+    <string name="today_attendance">Absensi Hari Ini</string>
+    <string name="register_petugas">Daftarkan Petugas</string>
+    <string name="api_endpoint">URL API Backend</string>
+    <string name="save">Simpan</string>
+    <string name="cancel">Batal</string>
+    <string name="confirm_checkin">Konfirmasi Absen</string>
+    <string name="synced">Tersinkron</string>
+    <string name="not_synced">Belum Sinkron</string>
+</resources>
