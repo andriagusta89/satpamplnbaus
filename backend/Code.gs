@@ -99,17 +99,30 @@ function doGet(e) {
     return jsonResponse(migratePetugasIdsToPam());
   }
 
-  // Default: serve web dashboard
-  const html = HtmlService.createTemplateFromFile('Dashboard');
+  // Default: Jika file Dashboard.html ada di Apps Script, sajikan.
+  // Jika file Dashboard.html dihapus, otomatis alihkan (redirect) ke GitHub Pages.
   try {
-    html.data = getDashboardData(getTodayDate());
-  } catch (err) {
-    html.data = {};
+    const html = HtmlService.createTemplateFromFile('Dashboard');
+    try {
+      html.data = getDashboardData(getTodayDate());
+    } catch (err) {
+      html.data = {};
+    }
+    html.activeApiUrl = getActiveApiUrl();
+    return html.evaluate()
+      .setTitle('Dashboard Piket Satpam')
+      .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+  } catch (noHtmlErr) {
+    return HtmlService.createHtmlOutput(
+      '<!DOCTYPE html><html><head>' +
+      '<meta http-equiv="refresh" content="0; url=https://andriagusta89.github.io/satpamplnbaus/">' +
+      '<script>window.location.replace("https://andriagusta89.github.io/satpamplnbaus/");<\/script>' +
+      '</head><body style="font-family:sans-serif; text-align:center; padding-top:50px;">' +
+      '<h3>Mengarahkan ke Dashboard Utama...</h3>' +
+      '<p><a href="https://andriagusta89.github.io/satpamplnbaus/">Klik di sini jika tidak otomatis dialihkan</a></p>' +
+      '</body></html>'
+    ).setTitle('Dashboard Piket Satpam');
   }
-  html.activeApiUrl = getActiveApiUrl();
-  return html.evaluate()
-    .setTitle('Dashboard Piket Satpam')
-    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
 function doPost(e) {
