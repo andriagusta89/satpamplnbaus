@@ -126,7 +126,7 @@ object AppModule {
             .create()
 
         return Retrofit.Builder()
-            .baseUrl("https://script.google.com/macros/s/AKfycbxTIZvMf3DGQM5ecrohFobHNhCGwvZGUNOg-av19T4/")
+            .baseUrl("https://script.google.com/macros/s/AKfycbysgMkCOZf9IORqFEMEdXIWb5g5BMv7HjyHz00-xo9foX34uvgTUABc9tCqqSCexZ2Q/")
             .client(client)
             .addConverterFactory(GsonConverterFactory.create(gson))
             .build()

@@ -52,7 +52,7 @@ val LOKASI_LIST = listOf(
     "ULP Wangi-wangi"
 )
 
-const val DEFAULT_API_URL = "https://script.google.com/macros/s/AKfycbxTIZvMf3DGQM5ecrohFobHNhCGwvZGUNOg-av19T4/exec"
+const val DEFAULT_API_URL = "https://script.google.com/macros/s/AKfycbysgMkCOZf9IORqFEMEdXIWb5g5BMv7HjyHz00-xo9foX34uvgTUABc9tCqqSCexZ2Q/exec"
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
